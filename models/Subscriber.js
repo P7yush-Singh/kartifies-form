@@ -10,12 +10,36 @@ const SubscriberSchema = new mongoose.Schema(
       trim: true,
       index: true,
     },
+
+    isVerified: {
+      type: Boolean,
+      default: false,
+      index: true,
+    },
+
+    verificationToken: {
+      type: String,
+      default: null,
+    },
+
+    verificationExpires: {
+      type: Date,
+      default: null,
+    },
+
+    verifiedAt: {
+      type: Date,
+      default: null,
+    },
+
     subscribedAt: {
       type: Date,
       default: Date.now,
     },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
 export default mongoose.models.Subscriber ||
