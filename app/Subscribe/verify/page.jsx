@@ -23,7 +23,7 @@ export default function VerifyPage() {
         }
 
         const response = await fetch(
-          `/api/subscribe/verify?token=${encodeURIComponent(token)}`,
+          `/api/Subscribe/verify?token=${encodeURIComponent(token)}`,
           {
             cache: "no-store",
           }
